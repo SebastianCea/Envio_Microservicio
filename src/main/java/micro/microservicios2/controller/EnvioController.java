@@ -3,6 +3,8 @@ package micro.microservicios2.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,6 +31,14 @@ public class EnvioController {
     @PostMapping
     public envio postEnvio(@RequestBody envio envio){
         return envioService.guardarEnvio(envio);
+    }
+
+    @PostMapping
+    public ResponseEntity<envio> crearEnvio(@RequestBody envio envio) {
+        return new ResponseEntity<>(
+            envioService.guardarEnvioConDatosExternos(envio), 
+            HttpStatus.CREATED
+        );
     }
 
     @GetMapping("/{id}")

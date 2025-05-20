@@ -23,25 +23,34 @@ public class envio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id_envio;
 
-    @Column
+    @Column (length = 250, nullable = false)
     private String destino;
 
-    @Column
+    @Column (length = 250, nullable = false)
     private String estado;
 
-    @Column
+    @Column (length = 250, nullable = false)
     private String origen;
 
-    @Column
+    @Column (length = 50, nullable = false)
+    private String nombre_conductor;
+
+    @Column (length = 50, nullable = false)
+    private String apellido_conductor;
+
+    @Column (length = 100, nullable = false)
+    private String id_conductor;
+
+    @Column 
     private String id_cliente;
 
     @Column
     private String id_venta;
 
-    @Column
+    @Column (nullable = false)
     private LocalDate fecha_salida;
 
-    @Column 
+    @Column (nullable = false)
     private LocalDate fecha_entrega;
 
 
