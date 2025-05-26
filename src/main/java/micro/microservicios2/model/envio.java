@@ -40,10 +40,10 @@ public class envio {
     private String id_conductor;
 
     @Column (length = 250, nullable = false)
-    private String id_cliente;
+    private int id_cliente;
 
     @Column(length = 250, nullable = false)
-    private String id_venta;
+    private int id_venta;
 
     @Column(length = 250, nullable = false)
     private int id_producto;
