@@ -3,9 +3,9 @@ package micro.microservicios2.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+/*import org.springframework.context.annotation.Bean;*/
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+/*import org.springframework.web.client.RestTemplate;*/
 
 import micro.microservicios2.model.envio;
 import micro.microservicios2.repository.EnvioRepository;
@@ -26,9 +26,9 @@ public class EnvioService {
         return envioRepository.save(envio);
     }
 
-    public envio crearEnvio(envio nuevoEnvio) {
+    /*public envio crearEnvio(envio nuevoEnvio) {
     return envioRepository.save(nuevoEnvio);
-}
+}*/
 
     public envio buscarxIdEnvio(String id){
         return envioRepository.getReferenceById(id);
@@ -42,10 +42,10 @@ public class EnvioService {
         return "No se encontró el envío";
     }
 
-    @Bean
+    /*@Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
-    }
+    }*/
 
     /*public Cliente obtenerCliente(String id_cliente){
         String url = "http://microservicio-cliente/clientes/" + id_cliente;

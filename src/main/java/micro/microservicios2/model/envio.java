@@ -39,10 +39,10 @@ public class envio {
     @Column (length = 100, nullable = false)
     private String id_conductor;
 
-    @Column 
+    @Column (length = 250, nullable = false)
     private String id_cliente;
 
-    @Column
+    @Column(length = 250, nullable = false)
     private String id_venta;
 
     @Column (nullable = false)
