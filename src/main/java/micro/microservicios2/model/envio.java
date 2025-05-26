@@ -40,10 +40,13 @@ public class envio {
     private String id_conductor;
 
     @Column (length = 250, nullable = false)
-    private String id_cliente;
+    private String idCliente;
 
     @Column(length = 250, nullable = false)
-    private String id_venta;
+    private String idVenta;
+
+    @Column(length = 250, nullable = false)
+    private int idProducto;
 
     @Column (nullable = false)
     private LocalDate fecha_salida;
